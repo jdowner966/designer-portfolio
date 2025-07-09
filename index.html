@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Jahvon Downer</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/1f2bd98ecb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav id="navBar">
+        <a href="index.html">Home <i class="fa-solid fa-house"></i></a>
+        <a href="index.html#featuredWorks">My Projects <i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="index.html#aboutMe">About Me <i class="fa-solid fa-user-large"></i></a>
+        <a href="index.html#contactMe">Contact Me <i class="fa-solid fa-envelope"></i></a>
+    </nav>
+    <h1 class="fade-in left">Jahvon Downer</h1>
+    <h2>Web Design/Development and UI/UX Design</h2>
+    <div id="introDescription">
+        <p>Design is all about getting your creative juices flowing. It's exciting to experiment. It's thrilling to be expressive.</p>
+    </div>
+    <div id="featuredWorks">
+        <h3>My featured Design and Development Projects (click for more info):</h3>
+        <div id="worksList">
+          <div id="FAMitem">
+            <a href="flagamania.html" class="previewLinks">
+              <img id="FAMpreview" class="previewGIFs" src="/img/FAMflaggame.gif" alt="GIF of the Flag Guessing Game in Flag-A-Mania">
+              <h3 class="gifHeadings">Flag-A-Mania Game <i class="fa-solid fa-flag-usa"></i></h3>
+            </a>
+          </div>
+          <div id="CMSitem">
+            <a href="albumcms.html" class="previewLinks">
+              <img id="CMSpreview" class="previewGIFs" src="/img/CMSaddreview.gif" alt="GIF of a review being added to a Content Management System">
+              <h3 class="gifHeadings">Album Review System (CMS) <i class="fa-solid fa-compact-disc"></i></h3>
+            </a>
+          </div>
+          <!-- <div id="HGMitem">
+            <img id="HGMpreview" class="previewGIFs" src="/img/CMSaddreview.gif" alt="GIF of a review being added to a Content Management System">
+            <h3 class="gifHeadings">History of Grunge Music <i class="fa-solid fa-guitar"></i></h3>
+          </div> -->
+        </div>
+    </div>
+    <div id="aboutMe">
+      <h2>About Me</h2>
+      <div id="aboutMeContents">
+        <img id="headshot" src="/img/headshot.jpg" alt="My professional headshot">
+        <p id="aboutMeText">Howdy! My name is Jahvon Downer. I am a 30-year old recent graduate from the University of Central Florida, as of May 2025. I started familiarizing myself with web design when I was a teenager, but it wasn't until the past few years that I really began to expand on that knowledge. Having learned CSS, JavaScript, PHP, MySQL and accessible, responsive design principles has transformed me into a rather ambitiuous and confident designer. This is only just the beginning, too- I aim to learn even more!</p>
+        <img id="portrait" src="/img/portrait.jpg" alt="A proud drawn portrait">
+      </div>
+    </div>
+    <div id="contactMe">
+      <h2>Contact Me</h2>
+      <h4>Because I'd love to hear from you!</h4>
+      <div id="contactForm">
+        <p>Email: <a href="mailto&#58;%&#54;Ad%6F&#119;%6E&#101;%7&#50;94&#52;&#64;%67&#37;6&#68;a&#105;l&#46;c%6&#70;m">&#106;down&#101;&#114;944&#64;gmail&#46;com</a><br><br>
+
+        Phone: (407) 720-9631 <br><br>
+        <a href="https://www.linkedin.com/in/jahvon-downer/">LinkedIn</a></p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <span>You can even immediately email me through this form:</span><br><br>
+
+            <input type="hidden" name="access_key" value="25b003d1-b2e1-407a-8ea6-a75e80312eaa">
+
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required><br><br>
+            <label for="name">Message:</label>
+            <textarea name="message" id="message" required></textarea>
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;"><br><br>
+
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+            <button type="submit">Send</button>
+
+        </form>
+    </div>
+  </div>
+  </body>
+</html>

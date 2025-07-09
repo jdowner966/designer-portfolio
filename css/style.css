@@ -1,0 +1,330 @@
+html, body {
+	min-height: 100%;
+}
+
+body {
+	color: #fefcfc;
+	margin: 20px 20px 20px 20px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: animateBg 10s linear infinite;
+  background-image: linear-gradient(0deg,#000070,#000051,#000000,#000070,#000051);
+  background-size: 100% 400%;
+}
+
+h1 {
+  text-align: center;
+  animation: fadeInLeft;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  font-family: Tahoma;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 5px 5px black;
+  font-size: 40px;
+}
+
+h2 {
+  text-align: center;
+  animation: fadeInRight;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 5px 5px black;
+  font-size: 35px;
+}
+
+h4 {
+  text-align: center;
+  font-size: 30px;
+}
+
+#introDescription {
+  text-align: center;
+  animation: fadeInLeft2;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+p {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translate(-100px, 0px); }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInLeft2 {
+  0% { opacity: 0; transform: translate(-50px, 0px); }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translate(50px, 0px); }
+  100% { opacity: 1; }
+}
+
+@keyframes animateBg {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+#navBar {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  padding: 10px;
+  background-image: linear-gradient(90deg,#0000a5,#000000)
+}
+
+#navBar > a:link {
+  color: rgb(130, 215, 238);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#navBar > a:visited {
+  color: rgb(130, 215, 238);
+  text-decoration: none;
+}
+
+#navBar > a:hover {
+  animation: linkRotation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes linkRotation {
+  0% { color: rgb(130, 215, 238); }
+  100% { color: rgb(235, 240, 62); transform: rotate(360deg) scale(2);}
+}
+
+#featuredWorks {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 10px 10px #000000;
+
+    border-style: dotted;
+    background-image: linear-gradient(180deg,#0000a5,#000051,#000000)
+}
+
+#worksList {
+   display: flex;
+}
+
+#featuredWorks > div {
+    margin: auto;
+    padding: 5px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.previewGIFs {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+}
+
+.gifHeadings {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#FAMitem {
+  padding-right: 20px;
+}
+
+#CMSitem {
+  padding-right: 20px;
+}
+
+a {
+  color: rgb(104, 210, 239);
+}
+
+.previewLinks {
+  text-decoration: none;
+
+
+}
+
+.previewLinks:hover {
+  animation: previewAnimation;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes previewAnimation {
+  0% { color: rgb(104, 210, 239); }
+  100% { color: yellow }
+}
+
+img {
+  border-width: 1px;
+  border-style: dashed;
+  max-width: 100%;
+  width: 2000px;
+  box-shadow: 5px 5px #000000;
+  max-height: 700px;
+}
+
+#headshot {
+  width: 300px;
+  margin-left: auto;
+  animation: fadeInLeft;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+}
+
+#portrait {
+  width: 340px;
+  margin-right: auto;
+  animation: fadeInRight;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+}
+
+#aboutMeContents {
+  display: flex;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#aboutMeText {
+  border-style: dotted;
+  box-shadow: 10px 10px #000000;
+  background-image: linear-gradient(45deg,#0000a5,#000051,#000000);
+  width: 600px;
+  height: 200px;
+  padding: 10px;
+}
+
+#contactForm {
+  display: flex;
+  border-style: dotted;
+  padding: 10px;
+  box-shadow: 10px 10px #000000;
+  background-image: linear-gradient(180deg,#0000a5,#000051,#000000);
+  width: 500px;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+/* flagamania.html CSS Elements */
+
+#FAMsection > div > p {
+  background-color: #01018a;
+  box-shadow: 5px 5px #000000;
+  padding: 5px;
+  max-height: 200px;
+  max-width: fit-content;
+}
+
+#FAMsection1 {
+  display: flex;
+  animation: fadeInLeft;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  margin-bottom: 70px;
+}
+
+#FAMsection2 {
+  display: flex;
+  animation: fadeInRight;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  margin-bottom: 70px;
+}
+
+#FAMsection3 {
+  display: flex;
+  animation: fadeInLeft;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  margin-bottom: 70px;
+}
+
+#FAMsection4 {
+  display: flex;
+  animation: fadeInRight;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  margin-bottom: 70px;
+}
+
+#FAMsection5 {
+  display: flex;
+  animation: fadeInLeft;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  margin-bottom: 70px;
+}
+
+/* albumcms.html CSS Elements */
+
+#CMSsection > div > p {
+  background-color: #01018a;
+  box-shadow: 5px 5px #000000;
+  padding: 5px;
+  max-height: 200px;
+  max-width: fit-content;
+}
+
+#CMSh2 {
+  text-align: center;
+  animation: fadeInRight;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#CMSsection1 {
+  display: flex;
+  animation: fadeInLeft;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  margin-bottom: 70px;
+}
+
+#CMSsection2 {
+  display: flex;
+  animation: fadeInRight;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  margin-bottom: 70px;
+}
+
+#CMSsection3 {
+  display: flex;
+  animation: fadeInLeft;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  margin-bottom: 70px;
+}
+
+#CMSsection4 {
+  display: flex;
+  animation: fadeInRight;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  margin-bottom: 70px;
+}

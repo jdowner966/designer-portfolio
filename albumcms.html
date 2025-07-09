@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Album Review System (CMS)</title>
+    <link rel="stylesheet" href="./css/style.css">
+   <script src="https://kit.fontawesome.com/1f2bd98ecb.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav id="navBar">
+        <a href="index.html">Home <i class="fa-solid fa-house"></i></a>
+        <a href="index.html#featuredWorks">My Projects <i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="aboutme.html">About Me <i class="fa-solid fa-user-large"></i></a>
+        <a href="contact.html">Contact Me <i class="fa-solid fa-envelope"></i></a>
+    </nav>
+    <h1><i class="fa-solid fa-compact-disc fa-spin"></i> Album Review System <i class="fa-solid fa-compact-disc fa-spin"></i></h1>
+    <h2 id="CMSh2">(Content Management System)</h2>
+    <div id="CMSsection">
+        <div id="CMSsection1">
+            <img src="/img/CMSsimplepreview.gif" alt="A GIF showcasing the album database in the CMS">
+            <p>In 2023 I took on a project at the University of Central Florida that would prove to be a valuable skill, which was using both PHP and MySQL to design my first ever Content Management System.<br><br>This came in the form of an album review API where a different website layout was displayed depending on 'administrator' or 'reviewer' user permissions using session cookies.</p>
+        </div>
+        <div id="CMSsection2">
+            <p>Logging in as a reviewer allows you to manually add album reviews. Just fill out the fields for the title, artist, review and rating. You can even insert an image for the album cover and the image will directly embed on the website.<br><br>
+            Additionally, when you are logged in as a reviewer, the table only displays the reviews you have submitted.</p>
+            <img src="/img/CMSaddreview.gif" alt="A GIF showcasing how to add reviews to the database in the CMS, while logged in as a reviewer">
+        </div>
+        <div id="CMSsection3">
+            <img src="/img/CMSdeletereview.gif" alt="A GIF showcasing how to delete reviews from the database in the CMS, while logged in as an administrator">
+            <p>However, if you are logged in as an administrator, an entirely different layout is displayed. Here, you can view every single review that has been uploaded, and you can also delete reviews from the database.</p>
+        </div>
+        <div id="CMSsection4">
+            <p>Another functionality of the site is being able to add comments to reviews. You are not limited to only adding comments to your own reviews- just click "See All Reviews" for the full list and you can add a comment to any of them!</p>
+            <img src="/img/CMSaddcomment.gif" alt="A GIF showing how to add comments to a review">
+        </div>
+    </div>
+    <p>Want to try it out for yourself? Just click <a class="previewLinks" href="https://students.gaim.ucf.edu/~ja881557/dig3134/assignment06/logout.php">here</a>. Administrative username and password are admin and admin (or admin2 and admin2), and review username/password are review and review (or review2 and review2).</p>
+  </body>
+</html>
