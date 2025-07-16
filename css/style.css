@@ -160,8 +160,6 @@ a {
 
 .previewLinks {
   text-decoration: none;
-
-
 }
 
 .previewLinks:hover {
@@ -177,9 +175,10 @@ a {
 
 img {
   border-width: 1px;
-  border-style: dashed;
+  border-style: outset;
   max-width: 100%;
   width: 2000px;
+  height: auto;
   box-shadow: 5px 5px #000000;
   max-height: 700px;
 }
@@ -190,10 +189,14 @@ img {
   animation: fadeInLeft;
   animation-iteration-count: 1;
   animation-duration: 4s;
+  max-width: 100%;
+  max-height: 300px;
 }
 
 #portrait {
   width: 340px;
+  max-height: 300px;
+  max-width: 100%;
   margin-right: auto;
   animation: fadeInRight;
   animation-iteration-count: 1;
@@ -211,9 +214,11 @@ img {
   border-style: dotted;
   box-shadow: 10px 10px #000000;
   background-image: linear-gradient(45deg,#0000a5,#000051,#000000);
-  width: 600px;
-  height: 200px;
+  width: 800px;
   padding: 10px;
+  max-height: fit-content;
+  max-width: fit-content;
+
 }
 
 #contactForm {
@@ -233,8 +238,8 @@ img {
   background-color: #01018a;
   box-shadow: 5px 5px #000000;
   padding: 5px;
-  max-height: 200px;
-  max-width: fit-content;
+  display: inline-block;
+  align-self: flex-start;
 }
 
 #FAMsection1 {
@@ -283,8 +288,8 @@ img {
   background-color: #01018a;
   box-shadow: 5px 5px #000000;
   padding: 5px;
-  max-height: 200px;
-  max-width: fit-content;
+  display: inline-block;
+  align-self: flex-start;
 }
 
 #CMSh2 {
