@@ -234,10 +234,6 @@ img {
 
 @media screen and (max-width: 1200px) {
 
-body {
-  animation: none;
-}
-
 h1 {
   animation: none;
 }
