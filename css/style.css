@@ -232,6 +232,90 @@ img {
   margin-right: 50px;
 }
 
+@media screen and (max-width: 1200px) {
+
+body {
+  animation: none;
+}
+
+h1 {
+  animation: none;
+}
+
+h2 {
+  animation: none;
+  opacity: 1;
+}
+
+#introDescription {
+  animation: none;
+  opacity: 1;
+}
+
+#contactForm {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#portrait {
+  animation: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+#headshot {
+  animation: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;;
+}
+
+#aboutMeText {
+  margin: auto;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+#aboutMeContents {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+#headshot {
+  width: 280px;
+  max-height: 280px;
+}
+
+#portrait {
+  width: 280px;
+  max-height: 280px;
+}
+
+#navBar > a:hover {
+  animation: previewAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+  
+}
+
+@media screen and (max-width: 600px) {
+
+#contactForm {
+  width: 100%;
+  padding: 0px;
+}
+
+}
+
+
 /* flagamania.html CSS Elements */
 
 #FAMsection > div > p {
