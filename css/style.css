@@ -11,6 +11,22 @@ body {
   background-size: 100% 400%;
 }
 
+.redTheme body {
+    background-image: linear-gradient(0deg,#890101,#510c00,#000000,#890101,#510c00);
+
+}
+
+#themeToggle {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #000070;
+  box-shadow: 10px 10px #000000;
+}
+
+.redTheme #themeToggle {
+  background-color: #6b1000;
+}
+
 h1 {
   text-align: center;
   animation: fadeInLeft;
@@ -89,8 +105,11 @@ p {
   background-image: linear-gradient(90deg,#0000a5,#000000)
 }
 
+.redTheme #navBar {
+  background-image: linear-gradient(90deg,#a50000,#000000)
+}
+
 #navBar > a:link {
-  color: rgb(130, 215, 238);
   text-decoration: none;
   font-weight: 700;
 }
@@ -100,14 +119,29 @@ p {
   text-decoration: none;
 }
 
+.redTheme #navBar a:visited {
+  color: rgb(250, 137, 137)
+}
+
 #navBar > a:hover {
   animation: linkRotation;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
+.redTheme #navBar > a:hover {
+  animation: redLinkRotation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes linkRotation {
   0% { color: rgb(130, 215, 238); }
+  100% { color: rgb(235, 240, 62); transform: rotate(360deg) scale(2);}
+}
+
+@keyframes redLinkRotation {
+  0% { color: rgb(250, 137, 137) }
   100% { color: rgb(235, 240, 62); transform: rotate(360deg) scale(2);}
 }
 
@@ -121,6 +155,10 @@ p {
 
     border-style: dotted;
     background-image: linear-gradient(180deg,#0000a5,#000051,#000000)
+}
+
+.redTheme #featuredWorks {
+  background-image: linear-gradient(180deg,#a50000,#510000,#000000)
 }
 
 #worksList {
@@ -158,6 +196,10 @@ a {
   color: rgb(104, 210, 239);
 }
 
+.redTheme a {
+  color: rgb(250, 137, 137)
+}
+
 .previewLinks {
   text-decoration: none;
 }
@@ -168,8 +210,19 @@ a {
   animation-fill-mode: forwards;
 }
 
+.redTheme .previewLinks:hover {
+  animation: redPreviewAnimation;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes previewAnimation {
   0% { color: rgb(104, 210, 239); }
+  100% { color: yellow }
+}
+
+@keyframes redPreviewAnimation {
+  0% { color: rgb(250, 137, 137) }
   100% { color: yellow }
 }
 
@@ -221,6 +274,11 @@ img {
 
 }
 
+.redTheme #aboutMeText {
+    background-image: linear-gradient(45deg,#a50000,#510000,#000000);
+
+}
+
 #contactForm {
   display: flex;
   border-style: dotted;
@@ -230,6 +288,11 @@ img {
   width: 500px;
   margin-left: auto;
   margin-right: 50px;
+}
+
+.redTheme #contactForm {
+  background-image: linear-gradient(180deg,#a50000,#510000,#000000);
+ 
 }
 
 @media screen and (max-width: 1200px) {
@@ -322,6 +385,10 @@ h2 {
   align-self: flex-start;
 }
 
+.redTheme #FAMsection > div > p {
+  background-color: #7f1401;
+}
+
 #FAMsection1 {
   display: flex;
   animation: fadeInLeft;
@@ -362,6 +429,18 @@ h2 {
   margin-bottom: 70px;
 }
 
+#FAMcredits {
+  border-style: dotted;
+  padding: 10px;
+  box-shadow: 10px 10px #000000;
+  background-image: linear-gradient(180deg,#0000a5,#000051,#000000);
+  display: inline-block;
+}
+
+.redTheme #FAMcredits {
+  background-image: linear-gradient(180deg,#a50000,#510000,#000000);
+}
+
 /* albumcms.html CSS Elements */
 
 #CMSsection > div > p {
@@ -370,6 +449,10 @@ h2 {
   padding: 5px;
   display: inline-block;
   align-self: flex-start;
+}
+
+.redTheme #CMSsection > div > p {
+  background-color: #7f1401;
 }
 
 #CMSh2 {
@@ -412,4 +495,16 @@ h2 {
   animation-iteration-count: 1;
   animation-duration: 4s;
   margin-bottom: 70px;
+}
+
+#CMSinfo {
+  border-style: dotted;
+  padding: 10px;
+  box-shadow: 10px 10px #000000;
+  background-image: linear-gradient(180deg,#0000a5,#000051,#000000);
+  display: inline-block;
+}
+
+.redTheme #CMSinfo {
+  background-image: linear-gradient(180deg,#a50000,#510000,#000000);
 }

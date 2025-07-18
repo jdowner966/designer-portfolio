@@ -4,6 +4,7 @@
   <head>
     <title>Flag-A-Mania</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/theme"></script>
    <script src="https://kit.fontawesome.com/1f2bd98ecb.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -13,6 +14,13 @@
         <a href="aboutme.html">About Me <i class="fa-solid fa-user-large"></i></a>
         <a href="contact.html">Contact Me <i class="fa-solid fa-envelope"></i></a>
     </nav>
+     <fieldset id="themeToggle">
+        <legend>Portfolio Color Themes</legend>
+        <input type="radio" id="blueTheme" name="theme" value="blue" checked>
+        <label for="blueTheme">Blue</label><br>
+        <input type="radio" id="redTheme" name="theme" value="red">
+        <label for="redTheme">Red</label>
+    </fieldset>
     <h1><i class="fa-solid fa-flag-usa fa-flip" style="--fa-animation-duration: 2s;"></i> Flag-A-Mania <i class="fa-solid fa-flag-usa fa-flip" style="--fa-animation-duration: 2s;"></i></h1>
     <div id="FAMsection">
         <div id="FAMsection1">
@@ -38,7 +46,7 @@
         </div>
     </div>
     <h4>Visit <a class="previewLinks" href="https://students.gaim.ucf.edu/~wu049684/Flag-A-Mania/html/index.html">here</a> if you'd like to play now!</h4>
-    <p>Credits:<br><br>
+    <p id="FAMcredits">Credits:<br><br>
     Jahvon Downer: Front-end and Back-end Design. Overall styling<br>
     Jason Phan: Game functionality, Back-end Design, QR Artifact<br>
     Wilmur Matias-Morales: Front-end Design, Dark Mode functionality<br>

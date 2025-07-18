@@ -1,0 +1,67 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+const themeToggle = document.getElementById("themeToggle");
+
+  const storedTheme = localStorage.getItem("selectedTheme");
+
+    if (storedTheme) {
+        // Check the correct radio button
+        const themeRadio = document.querySelector(`#themeToggle input[value="${storedTheme}"]`);
+        if (themeRadio) {
+            themeRadio.checked = true;
+        }
+
+        // Apply theme class
+        if (storedTheme === "red") {
+            document.documentElement.classList.add("redTheme");
+        } else {
+            document.documentElement.classList.remove("redTheme");
+        }
+    }
+
+function getSelectedTheme() {
+    const selectedTheme = document.querySelector('#themeToggle input[name="theme"]:checked');
+    return selectedTheme ? selectedTheme.value : null;
+  }
+
+  
+
+ document.querySelectorAll('#themeToggle input[name="theme"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+
+        console.log("Selected theme:", getSelectedTheme());
+
+        const theme = getSelectedTheme();
+    console.log("Selected theme:", theme);
+
+    localStorage.setItem("selectedTheme", theme);
+
+    
+        
+        if (getSelectedTheme() === "red") {
+            document.documentElement.classList.add("redTheme")
+        } else {
+            document.documentElement.classList.remove("redTheme")
+        }
+    
+
+    });
+
+    
+  });
+
+
+
+/* themeToggle.addEventListener("click", function () {
+        document.documentElement.classList.toggle("dark-mode");
+
+        if (document.documentElement.classList.contains("redTheme")) {
+            localStorage.setItem("darkMode", "enabled");
+            darkModeToggle.classList.replace("fa-moon-o", "fa-sun-o");
+        
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+        }
+    }); */
+
+});
