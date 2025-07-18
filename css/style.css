@@ -21,6 +21,7 @@ body {
   margin-top: 20px;
   background-color: #000070;
   box-shadow: 10px 10px #000000;
+  position: absolute;
 }
 
 .redTheme #themeToggle {
@@ -505,6 +506,6 @@ h2 {
   display: inline-block;
 }
 
-.redTheme #CMSinfo {
+.redTheme #FAMcredits {
   background-image: linear-gradient(180deg,#a50000,#510000,#000000);
 }
