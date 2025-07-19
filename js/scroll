@@ -1,0 +1,63 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+const elementsToObserve = [
+    'aboutMeHeading',
+    'contactMeHeading',
+    'portrait',
+    'headshot',
+    'FAMsection2',
+    'FAMsection3',
+    'FAMsection4',
+    'FAMsection5',
+    'CMSsection2',
+    'CMSsection3',
+    'CMSsection4'
+  ].map(id => document.getElementById(id));
+
+  elementsToObserve.forEach(el => {
+    if (!el) {
+      console.warn("Element not found:", el);
+    } else {
+      el.style.opacity = "0";
+    }
+  });
+
+const fadeInDirections = {
+    'aboutMeHeading': 'fadeInLeft',
+    'headshot': 'fadeInLeft',
+    'FAMsection3': 'fadeInLeft',
+    'CMSsection3': 'fadeInLeft',
+    'FAMsection5': 'fadeInLeft',
+    'contactMeHeading': 'fadeInRight',
+    'portrait': 'fadeInRight',
+    'FAMsection2': 'fadeInRight',
+    'CMSsection2': 'fadeInRight',
+    'FAMsection4': 'fadeInRight',
+    'CMSsection4': 'fadeInRight',
+  };
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+        const target = entry.target;
+        const animation = fadeInDirections[target.id];
+
+        if (animation) {
+          target.style.animationName = animation;
+          target.style.animationDuration = "3s";
+          target.style.animationIterationCount = "1";
+          target.style.animationFillMode = "forwards";
+        }
+
+        observer.unobserve(target);
+    }
+    
+    });
+  }, { threshold: [0.3] });
+
+elementsToObserve.forEach(el => {
+      if (el) observer.observe(el);
+    })
+
+});

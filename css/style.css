@@ -42,11 +42,10 @@ h1 {
 
 h2 {
   text-align: center;
-  animation: fadeInRight;
+  /*animation: fadeInRight;
   animation-iteration-count: 1;
   animation-duration: 4s;
-  animation-fill-mode: forwards;
-  opacity: 0;
+  animation-fill-mode: forwards;*/
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
   text-shadow: 5px 5px black;
@@ -240,9 +239,7 @@ img {
 #headshot {
   width: 300px;
   margin-left: auto;
-  animation: fadeInLeft;
-  animation-iteration-count: 1;
-  animation-duration: 4s;
+  animation-delay: 1s;
   max-width: 100%;
   max-height: 300px;
 }
@@ -252,9 +249,7 @@ img {
   max-height: 300px;
   max-width: 100%;
   margin-right: auto;
-  animation: fadeInRight;
-  animation-iteration-count: 1;
-  animation-duration: 4s;
+  animation-delay: 1s;
 }
 
 #aboutMeContents {
@@ -272,6 +267,8 @@ img {
   padding: 10px;
   max-height: fit-content;
   max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -295,6 +292,7 @@ img {
   background-image: linear-gradient(180deg,#a50000,#510000,#000000);
  
 }
+  
 
 @media screen and (max-width: 1200px) {
 
@@ -341,6 +339,14 @@ h2 {
   display: grid;
   margin-left: auto;
   margin-right: auto;
+}
+
+}
+
+@media screen and (max-width: 820px) {
+
+#themeToggle {
+  position: relative;
 }
 
 }
@@ -400,33 +406,21 @@ h2 {
 
 #FAMsection2 {
   display: flex;
-  animation: fadeInRight;
-  animation-iteration-count: 1;
-  animation-duration: 4s;
   margin-bottom: 70px;
 }
 
 #FAMsection3 {
   display: flex;
-  animation: fadeInLeft;
-  animation-iteration-count: 1;
-  animation-duration: 4s;
   margin-bottom: 70px;
 }
 
 #FAMsection4 {
   display: flex;
-  animation: fadeInRight;
-  animation-iteration-count: 1;
-  animation-duration: 4s;
   margin-bottom: 70px;
 }
 
 #FAMsection5 {
   display: flex;
-  animation: fadeInLeft;
-  animation-iteration-count: 1;
-  animation-duration: 4s;
   margin-bottom: 70px;
 }
 
@@ -476,25 +470,16 @@ h2 {
 
 #CMSsection2 {
   display: flex;
-  animation: fadeInRight;
-  animation-iteration-count: 1;
-  animation-duration: 4s;
   margin-bottom: 70px;
 }
 
 #CMSsection3 {
   display: flex;
-  animation: fadeInLeft;
-  animation-iteration-count: 1;
-  animation-duration: 4s;
   margin-bottom: 70px;
 }
 
 #CMSsection4 {
-  display: flex;
-  animation: fadeInRight;
-  animation-iteration-count: 1;
-  animation-duration: 4s;
+  display: flex;;
   margin-bottom: 70px;
 }
 
