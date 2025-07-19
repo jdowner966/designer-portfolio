@@ -11,7 +11,9 @@ const elementsToObserve = [
     'FAMsection5',
     'CMSsection2',
     'CMSsection3',
-    'CMSsection4'
+    'CMSsection4',
+    'FAMcredits',
+    'CMSinfo'
   ].map(id => document.getElementById(id));
 
   elementsToObserve.forEach(el => {
@@ -28,6 +30,8 @@ const fadeInDirections = {
     'FAMsection3': 'fadeInLeft',
     'CMSsection3': 'fadeInLeft',
     'FAMsection5': 'fadeInLeft',
+    'FAMcredits': 'fadeInLeft',
+    'CMSinfo': 'fadeInLeft',
     'contactMeHeading': 'fadeInRight',
     'portrait': 'fadeInRight',
     'FAMsection2': 'fadeInRight',
@@ -54,7 +58,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     }
     
     });
-  }, { threshold: [0.3] });
+  }, { threshold: [0.4] });
 
 elementsToObserve.forEach(el => {
       if (el) observer.observe(el);
