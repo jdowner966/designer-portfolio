@@ -123,7 +123,7 @@ p {
   color: rgb(250, 137, 137)
 }
 
-#navBar > a:hover {
+/*#navBar > a:hover {
   animation: linkRotation;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -133,7 +133,7 @@ p {
   animation: redLinkRotation;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-}
+} */
 
 @keyframes linkRotation {
   0% { color: rgb(130, 215, 238); }

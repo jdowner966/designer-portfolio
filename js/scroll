@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-
-
-console.log(navBarLinks);
-
 const elementsToObserve = [
     'aboutMeHeading',
     'contactMeHeading',
@@ -62,7 +58,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     }
     
     });
-  }, { threshold: [0.25] });
+  }, { threshold: [0.2] });
 
 elementsToObserve.forEach(el => {
       if (el) observer.observe(el);

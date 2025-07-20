@@ -64,6 +64,7 @@ function linkAnimation(event) {
 
     link.style.animationDuration = "1s";
     link.style.animationIterationCount = "1";
+    link.style.animationFillMode = "forwards";
 }
 
 function reverseLinkAnimation(event) {
