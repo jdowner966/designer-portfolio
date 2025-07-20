@@ -140,9 +140,19 @@ p {
   100% { color: rgb(235, 240, 62); transform: rotate(360deg) scale(2);}
 }
 
+@keyframes linkRotationOut {
+  0% { color: rgb(235, 240, 62); transform: scale(2);}
+  100% { color: rgb(130, 215, 238); transform: rotate(0deg) scale(1);}
+}
+
 @keyframes redLinkRotation {
   0% { color: rgb(250, 137, 137) }
   100% { color: rgb(235, 240, 62); transform: rotate(360deg) scale(2);}
+}
+
+@keyframes redLinkRotationOut {
+  0% { color: rgb(235, 240, 62); transform: scale(2);}
+  100% { color: rgb(250, 137, 137); transform: rotate(0deg) scale(1);}
 }
 
 #featuredWorks {

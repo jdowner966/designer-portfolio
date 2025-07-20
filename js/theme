@@ -50,6 +50,39 @@ function getSelectedTheme() {
     
   });
 
+const navBar = document.getElementById('navBar');
+const navBarLinks = navBar.getElementsByTagName('a');
+
+function linkAnimation(event) {
+    const link = event.currentTarget;
+    
+    if (getSelectedTheme() === "red") {
+            link.style.animationName = "redLinkRotation"
+        } else {
+            link.style.animationName = "linkRotation"
+        };
+
+    link.style.animationDuration = "1s";
+    link.style.animationIterationCount = "1";
+}
+
+function reverseLinkAnimation(event) {
+    const link = event.currentTarget;
+
+    if (getSelectedTheme() === "red") {
+            link.style.animationName = "redLinkRotationOut"
+        } else {
+            link.style.animationName = "linkRotationOut"
+        };
+
+    link.style.animationDuration = "1s";
+    link.style.animationIterationCount = "1";
+}
+
+for (let link of navBarLinks) {
+    link.addEventListener("mouseout", reverseLinkAnimation);
+    link.addEventListener("mouseover", linkAnimation);
+}
 
 
 /* themeToggle.addEventListener("click", function () {

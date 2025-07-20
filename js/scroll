@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+
+
+console.log(navBarLinks);
+
 const elementsToObserve = [
     'aboutMeHeading',
     'contactMeHeading',
