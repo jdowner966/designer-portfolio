@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-const themeToggle = document.getElementById("themeToggle");
+const navBar = document.getElementById('navBar');
+const navBarLinks = navBar.getElementsByTagName('a');
 
   const storedTheme = localStorage.getItem("selectedTheme");
 
     if (storedTheme) {
-        // Check the correct radio button
+        
         const themeRadio = document.querySelector(`#themeToggle input[value="${storedTheme}"]`);
         if (themeRadio) {
             themeRadio.checked = true;
         }
 
-        // Apply theme class
+        
         if (storedTheme === "red") {
             document.documentElement.classList.add("redTheme");
         } else {
@@ -26,32 +27,37 @@ function getSelectedTheme() {
 
   
 
- document.querySelectorAll('#themeToggle input[name="theme"]').forEach(radio => {
+document.querySelectorAll('#themeToggle input[name="theme"]').forEach(radio => {
     radio.addEventListener('change', () => {
 
-        console.log("Selected theme:", getSelectedTheme());
-
         const theme = getSelectedTheme();
-    console.log("Selected theme:", theme);
+        localStorage.setItem("selectedTheme", theme);
 
-    localStorage.setItem("selectedTheme", theme);
-
-    
-        
-        if (getSelectedTheme() === "red") {
-            document.documentElement.classList.add("redTheme")
-        } else {
-            document.documentElement.classList.remove("redTheme")
+        // Remove lingering animation styles and color
+        for (let link of navBarLinks) {
+            link.style.animation = "none"; // cancel current animation
+            link.offsetHeight; // force reflow to ensure changes apply
+            link.style.animationName = ""; // fully clear name
+            link.style.animationDirection = "";
+            link.style.animationDuration = "";
+            link.style.animationIterationCount = "";
+            link.style.animationFillMode = "";
         }
-    
 
+        // Apply the new theme class and update base link colors
+        if (theme === "red") {
+            document.documentElement.classList.add("redTheme");
+            for (let link of navBarLinks) {
+                link.style.color = "rgb(250, 137, 137)";
+            }
+        } else {
+            document.documentElement.classList.remove("redTheme");
+            for (let link of navBarLinks) {
+                link.style.color = "rgb(130, 215, 238)";
+            }
+        }
     });
-
-    
-  });
-
-const navBar = document.getElementById('navBar');
-const navBarLinks = navBar.getElementsByTagName('a');
+});
 
 function linkAnimation(event) {
     const link = event.currentTarget;
@@ -84,18 +90,5 @@ for (let link of navBarLinks) {
     link.addEventListener("mouseout", reverseLinkAnimation);
     link.addEventListener("mouseover", linkAnimation);
 }
-
-
-/* themeToggle.addEventListener("click", function () {
-        document.documentElement.classList.toggle("dark-mode");
-
-        if (document.documentElement.classList.contains("redTheme")) {
-            localStorage.setItem("darkMode", "enabled");
-            darkModeToggle.classList.replace("fa-moon-o", "fa-sun-o");
-        
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-        }
-    }); */
 
 });
