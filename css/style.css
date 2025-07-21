@@ -50,6 +50,23 @@ h2 {
   -webkit-text-stroke-color: black;
   text-shadow: 5px 5px black;
   font-size: 35px;
+  border-bottom: outset;
+}
+
+#titleHeading {
+  opacity: 0;
+  animation: fadeInRight;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+#featuredHeading {
+  opacity: 0;
+  animation: fadeInLeft;
+  animation-iteration-count: 1;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
 
 h4 {
@@ -163,7 +180,7 @@ p {
   padding-right: 10px;
   box-shadow: 10px 10px #000000;
 
-    border-style: dotted;
+    border-style:outset; 
     background-image: linear-gradient(180deg,#0000a5,#000051,#000000)
 }
 
@@ -293,16 +310,35 @@ img {
   padding: 10px;
   box-shadow: 10px 10px #000000;
   background-image: linear-gradient(180deg,#0000a5,#000051,#000000);
-  width: 500px;
+  width: 800px;
+  height: 400px;
   margin-left: auto;
-  margin-right: 50px;
+  margin-right: auto;
+  align-content: center;
+}
+
+form {
+  border-left: dotted;
+  padding-left: 5px;
+}
+
+#name {
+  width: 300px;
+}
+
+#email {
+  width: 300px;
+}
+
+#message {
+  width: 500px;
+  height: 200px;
 }
 
 .redTheme #contactForm {
   background-image: linear-gradient(180deg,#a50000,#510000,#000000);
- 
+
 }
-  
 
 @media screen and (max-width: 1200px) {
 
