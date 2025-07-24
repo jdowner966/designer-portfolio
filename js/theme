@@ -33,18 +33,16 @@ document.querySelectorAll('#themeToggle input[name="theme"]').forEach(radio => {
         const theme = getSelectedTheme();
         localStorage.setItem("selectedTheme", theme);
 
-        // Remove lingering animation styles and color
         for (let link of navBarLinks) {
-            link.style.animation = "none"; // cancel current animation
-            link.offsetHeight; // force reflow to ensure changes apply
-            link.style.animationName = ""; // fully clear name
+            link.style.animation = "none";
+            link.offsetHeight;
+            link.style.animationName = "";
             link.style.animationDirection = "";
             link.style.animationDuration = "";
             link.style.animationIterationCount = "";
             link.style.animationFillMode = "";
         }
 
-        // Apply the new theme class and update base link colors
         if (theme === "red") {
             document.documentElement.classList.add("redTheme");
             for (let link of navBarLinks) {
