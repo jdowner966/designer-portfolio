@@ -39,6 +39,7 @@ h1 {
   text-shadow: 10px 10px black;
   font-size: 60px;
   color: #84d0ff;
+  margin-top: 20px;
 }
 
 .redTheme h1 {
@@ -363,9 +364,35 @@ form {
 
 }
 
+.tidbit {
+  background-image: linear-gradient(180deg,#0000a5,#000051,#000000);
+  box-shadow: 5px 5px #000000;
+  border-style: ridge;
+  position: absolute;
+  right: 2px;
+  padding: 5px;
+  width: 200px;
+  animation: fadeOut;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+.redTheme .tidbit {
+  background-image: linear-gradient(180deg,#a50000,#510000,#000000);
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 0; visibility: hidden; position: absolute;}
+}
+
+
 /* MEDIA QUERY SECTION */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
 
 h1 {
   animation: none;
@@ -415,6 +442,29 @@ h2 {
 
 #themeToggle {
   position: static;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  display: flex;
+}
+
+#themeToggle > label {
+  font-size: 30px;
+}
+
+#themeToggle > input[type=radio] {
+  width: 20px;
+}
+
+#redTheme {
+  margin-left: 20px;
+}
+
+.tidbit {
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  width: 410px;
 }
 
 }
@@ -455,29 +505,6 @@ h2 {
   padding: 0px;
 }
 
-}
-
-.tidbit {
-  background-color: #01018a;
-  box-shadow: 5px 5px #000000;
-  border-style: ridge;
-  position: absolute;
-  right: 2px;
-  padding: 5px;
-  animation: fadeOut;
-  animation-iteration-count: 1;
-  animation-duration: 0.5s;
-  animation-delay: 5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeOut {
-  0% {opacity: 1;}
-  100% {opacity: 0;}
-}
-
-.redTheme .tidbit {
-  background-color: #941701;
 }
 
 
