@@ -203,9 +203,8 @@ p {
   padding-left: 10px;
   padding-right: 10px;
   box-shadow: 10px 10px #000000;
-
-    border-style:outset; 
-    background-image: linear-gradient(180deg,#0000a5,#000051,#000000)
+  border-style:outset; 
+  background-image: linear-gradient(180deg,#0000a5,#000051,#000000)
 }
 
 .redTheme #featuredWorks {
@@ -222,6 +221,48 @@ p {
     align-items: center;
     align-content: center;
     text-align: center;
+}
+
+#reactList {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  box-shadow: 10px 10px #000000;
+  border-style: outset; 
+  background-image: linear-gradient(240deg,#0000a5,#000051,#000000)
+}
+
+.redTheme #reactList {
+  background-image: linear-gradient(240deg,#a50000,#510000,#000000)
+}
+
+#reactGIFs {
+  display: flex;
+  margin-top: 20px;
+}
+
+#reactGIFs > div {
+  text-align: center;
+  margin-left: 30px;
+}
+
+#addToListGIF {
+  width: 300px;
+  height: 400px;
+}
+
+#menuGIF {
+  width: 600px;
+  height: 400px;
+}
+
+#stopwatchGIF {
+  width: 250px;
+  height: 300px;
 }
 
 .previewGIFs {
